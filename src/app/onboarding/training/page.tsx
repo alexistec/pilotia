@@ -10,14 +10,14 @@ export default function TrainingMethodPage() {
 
       <main className="flex-1 max-w-3xl w-full mx-auto px-6 py-10">
         <p className="text-xs uppercase tracking-widest text-muted-2 mb-2">
-          Step 2 of 4
+          Paso 2 de 4
         </p>
         <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight">
-          How would you like to train your AI assistant?
+          ¿Cómo querés entrenar a tu asistente IA?
         </h1>
         <p className="text-muted mt-3 max-w-xl">
-          Choose the method that feels most natural to you. Your AI learns from
-          everything you share.
+          Elegí el método que te resulte más natural. Tu IA aprende de todo lo que
+          compartas.
         </p>
 
         <div className="mt-8 space-y-4">
@@ -25,22 +25,22 @@ export default function TrainingMethodPage() {
           <article className="rounded-2xl border border-accent/40 bg-surface/60 p-6 shadow-[0_0_60px_-30px_var(--color-accent-glow)] relative">
             <div className="absolute right-6 top-6">
               <span className="inline-flex items-center gap-1 text-xs font-medium px-2.5 py-1 rounded-full bg-accent text-white">
-                <Sparkles size={12} /> Recommended
+                <Sparkles size={12} /> Recomendado
               </span>
             </div>
 
             <IconBadge tone="accent" size="md" icon={<Mic size={18} />} />
-            <h2 className="text-xl font-semibold mt-4">Train with Voice</h2>
+            <h2 className="text-xl font-semibold mt-4">Entrenar con voz</h2>
             <p className="text-sm text-muted mt-1 max-w-md">
-              Record a voice message explaining your business. Your AI learns from how
-              you naturally speak.
+              Grabá un mensaje de voz explicando tu negocio. Tu IA aprende de cómo
+              hablás naturalmente.
             </p>
             <ul className="mt-4 space-y-2 text-sm">
               {[
-                "What your business does",
-                "Common customer questions",
-                "Conversations that matter most",
-                "When the AI should notify you",
+                "Qué hace tu negocio",
+                "Preguntas frecuentes de clientes",
+                "Las conversaciones que más importan",
+                "Cuándo la IA te debe avisar",
               ].map((t) => (
                 <li key={t} className="flex items-center gap-2 text-foreground">
                   <span className="h-1.5 w-1.5 rounded-full bg-accent" />
@@ -54,24 +54,24 @@ export default function TrainingMethodPage() {
               leftIcon={<Mic size={16} />}
               rightIcon={<ArrowRight size={16} />}
             >
-              Start Voice Training
+              Empezar entrenamiento por voz
             </ButtonLink>
           </article>
 
           {/* Text */}
           <article className="rounded-2xl border border-border bg-surface/60 p-6">
             <IconBadge tone="neutral" size="md" icon={<Pencil size={18} />} />
-            <h2 className="text-xl font-semibold mt-4">Train with Text</h2>
+            <h2 className="text-xl font-semibold mt-4">Entrenar con texto</h2>
             <p className="text-sm text-muted mt-1 max-w-md">
-              Write instructions about your business in your own words. Perfect if you
-              prefer writing.
+              Escribí instrucciones sobre tu negocio con tus palabras. Ideal si
+              preferís escribir.
             </p>
             <ul className="mt-4 space-y-2 text-sm">
               {[
-                "Describe your business",
-                "Add frequently asked questions",
-                "Define what a qualified lead is",
-                "Set escalation rules",
+                "Describí tu negocio",
+                "Agregá preguntas frecuentes",
+                "Definí qué es un lead calificado",
+                "Configurá reglas de escalación",
               ].map((t) => (
                 <li key={t} className="flex items-center gap-2 text-muted">
                   <span className="h-1.5 w-1.5 rounded-full bg-muted-2" />
@@ -85,7 +85,7 @@ export default function TrainingMethodPage() {
               className="mt-6"
               leftIcon={<Pencil size={16} />}
             >
-              Start Writing
+              Empezar a escribir
             </ButtonLink>
           </article>
         </div>

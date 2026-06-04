@@ -6,7 +6,7 @@ import { ProgressHeader } from "@/components/ui/ProgressHeader";
 import { Button } from "@/components/ui/Button";
 import { StepFooter } from "@/components/ui/StepFooter";
 
-const FAKE_TRANSCRIPT = `I own a real estate agency called Rivera Properties. We help clients buy, sell, and rent homes in the Miami metro area. Customers often ask about pricing for specific properties, neighborhood information, and the buying process. I want the assistant to answer questions about availability and pricing, and notify me when someone asks for a visit or talks about financing.`;
+const FAKE_TRANSCRIPT = `Soy dueño de una inmobiliaria llamada Rivera Properties. Ayudamos a clientes a comprar, vender y alquilar casas en el área de Miami. Los clientes suelen preguntar sobre precios de propiedades específicas, información de los barrios y el proceso de compra. Quiero que el asistente responda preguntas sobre disponibilidad y precios, y que me avise cuando alguien pida una visita o hable de financiación.`;
 
 export default function VoiceTrainingPage() {
   const router = useRouter();
@@ -20,7 +20,6 @@ export default function VoiceTrainingPage() {
     return () => clearInterval(id);
   }, [recording]);
 
-  // Type out transcript while "recording"
   useEffect(() => {
     if (!recording) return;
     if (transcript.length >= FAKE_TRANSCRIPT.length) return;
@@ -39,20 +38,20 @@ export default function VoiceTrainingPage() {
 
       <main className="flex-1 max-w-2xl w-full mx-auto px-6 py-10 pb-32">
         <p className="text-xs uppercase tracking-widest text-muted-2 mb-2">
-          Step 3 of 4
+          Paso 3 de 4
         </p>
         <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight">
-          Voice Training
+          Entrenamiento por voz
         </h1>
 
         <div className="mt-6 rounded-2xl border border-border bg-surface/60 p-5 flex items-start gap-3">
           <span className="h-9 w-9 rounded-full bg-accent-soft text-accent flex items-center justify-center text-xs font-semibold">
-            AI
+            IA
           </span>
           <div className="flex-1">
             <p className="text-sm">
-              Tell me about your business. Describe what you do, what questions
-              customers usually ask, and when you want me to notify you.
+              Contame sobre tu negocio. Describí qué hacés, qué preguntas suelen hacer
+              tus clientes y cuándo querés que te avise.
             </p>
             <p className="text-accent text-lg leading-none mt-2">···</p>
           </div>
@@ -64,25 +63,24 @@ export default function VoiceTrainingPage() {
           <button
             onClick={() => setRecording((r) => !r)}
             className="mt-4 h-14 w-14 rounded-full bg-danger hover:bg-danger/90 flex items-center justify-center text-white transition-all active:scale-95 shadow-[0_0_40px_-10px_rgba(239,68,68,0.6)]"
-            aria-label={recording ? "Stop recording" : "Start recording"}
+            aria-label={recording ? "Detener grabación" : "Reanudar grabación"}
           >
             {recording ? <Square size={20} fill="white" /> : <Mic size={22} />}
           </button>
           <p className="mt-3 text-xs text-muted">
-            {recording ? "Recording… tap to stop" : "Tap to resume"}
+            {recording ? "Grabando… tocá para detener" : "Tocá para continuar"}
           </p>
         </div>
 
         <div className="mt-6 rounded-2xl border border-border bg-surface/60 p-5">
           <p className="text-xs uppercase tracking-widest text-muted-2 mb-2">
-            Live transcript
+            Transcripción en vivo
           </p>
           <p className="text-sm leading-relaxed">
             {transcript}
             {recording && <span className="text-accent animate-pulse">▍</span>}
           </p>
         </div>
-
       </main>
 
       <StepFooter>
@@ -92,7 +90,7 @@ export default function VoiceTrainingPage() {
           onClick={() => router.push("/onboarding/review")}
           rightIcon={<ArrowRight size={18} />}
         >
-          Finish &amp; Review
+          Terminar y revisar
         </Button>
       </StepFooter>
     </div>

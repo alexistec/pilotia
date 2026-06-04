@@ -11,7 +11,7 @@ import { StepFooter } from "@/components/ui/StepFooter";
 export default function ConnectWhatsAppPage() {
   const router = useRouter();
   const [connected, setConnected] = useState(false);
-  const [phone, setPhone] = useState("+1 (555) 012-3456");
+  const [phone, setPhone] = useState("+54 11 5012-3456");
 
   function handleConnect() {
     if (!connected) {
@@ -27,14 +27,14 @@ export default function ConnectWhatsAppPage() {
 
       <main className="flex-1 max-w-2xl w-full mx-auto px-6 py-10 pb-32">
         <p className="text-xs uppercase tracking-widest text-muted-2 mb-2">
-          Step 1 of 4
+          Paso 1 de 4
         </p>
         <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight">
-          Connect Your Business WhatsApp
+          Conectá tu WhatsApp Business
         </h1>
         <p className="text-muted mt-3 max-w-xl">
-          Your AI assistant will monitor conversations and identify customers with real
-          buying intent — so you only talk to people ready to purchase.
+          Tu asistente IA va a monitorear conversaciones e identificar clientes con
+          intención real de compra — para que solo hables con gente lista para comprar.
         </p>
 
         <div className="mt-8 rounded-2xl border border-border bg-surface/60 p-6">
@@ -45,12 +45,12 @@ export default function ConnectWhatsAppPage() {
               </span>
               <div>
                 <p className="font-medium">WhatsApp Business</p>
-                <p className="text-xs text-muted-2">Connect your number</p>
+                <p className="text-xs text-muted-2">Conectá tu número</p>
               </div>
             </div>
             {connected && (
               <span className="text-xs flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-success/30 bg-success-soft text-success">
-                <span className="h-1.5 w-1.5 rounded-full bg-success" /> Connected
+                <span className="h-1.5 w-1.5 rounded-full bg-success" /> Conectado
               </span>
             )}
           </div>
@@ -60,17 +60,17 @@ export default function ConnectWhatsAppPage() {
               <div className="rounded-xl border border-border bg-background/60 p-6 flex flex-col items-center">
                 <FakeQR />
                 <p className="text-xs text-muted-2 mt-4 text-center leading-relaxed">
-                  Scan with WhatsApp
+                  Escaneá con WhatsApp
                   <br />
-                  on your phone
+                  desde tu celular
                 </p>
               </div>
               <div className="mt-5">
                 <Input
-                  label="Your WhatsApp number"
+                  label="Tu número de WhatsApp"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  placeholder="+1 (555) 000-0000"
+                  placeholder="+54 11 0000-0000"
                 />
               </div>
             </>
@@ -79,7 +79,7 @@ export default function ConnectWhatsAppPage() {
               <span className="h-14 w-14 rounded-full border-2 border-success flex items-center justify-center">
                 <CheckCircle2 size={28} className="text-success" strokeWidth={2.5} />
               </span>
-              <p className="font-medium text-success mt-3">WhatsApp Connected</p>
+              <p className="font-medium text-success mt-3">WhatsApp conectado</p>
               <p className="text-sm text-muted mt-1">{phone}</p>
             </div>
           )}
@@ -87,10 +87,9 @@ export default function ConnectWhatsAppPage() {
 
         <div className="mt-5 rounded-xl border border-border bg-surface/40 px-4 py-3 flex items-start gap-3 text-xs text-muted">
           <ShieldCheck size={16} className="text-muted-2 mt-0.5 shrink-0" />
-          Your WhatsApp messages are processed securely. We never share your data with
-          third parties.
+          Tus mensajes de WhatsApp se procesan de forma segura. Nunca compartimos tus
+          datos con terceros.
         </div>
-
       </main>
 
       <StepFooter>
@@ -101,7 +100,7 @@ export default function ConnectWhatsAppPage() {
           rightIcon={<ArrowRight size={18} />}
           leftIcon={!connected ? <WhatsAppIcon size={18} className="text-white" /> : undefined}
         >
-          {connected ? "Continue" : "Connect WhatsApp"}
+          {connected ? "Continuar" : "Conectar WhatsApp"}
         </Button>
       </StepFooter>
     </div>
@@ -109,7 +108,6 @@ export default function ConnectWhatsAppPage() {
 }
 
 function FakeQR() {
-  // Stylized QR mock — purely visual
   const cells = Array.from({ length: 9 * 9 }, (_, i) => {
     const x = i % 9;
     const y = Math.floor(i / 9);

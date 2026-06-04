@@ -17,29 +17,28 @@ export default function SignUpPage() {
 
   return (
     <div className="min-h-screen grid lg:grid-cols-2">
-      {/* Left column — benefits */}
       <aside className="hidden lg:flex flex-col justify-between px-12 py-10 border-r border-border">
         <Logo />
         <div>
           <p className="text-xs uppercase tracking-widest text-muted-2 mb-6">
-            What you get
+            Qué obtenés
           </p>
           <ul className="space-y-5 max-w-sm">
             {[
               {
                 icon: <MessageSquare size={18} />,
-                t: "AI monitors every conversation",
-                d: "Your assistant reads and understands every WhatsApp message.",
+                t: "La IA monitorea cada conversación",
+                d: "Tu asistente lee y entiende cada mensaje de WhatsApp.",
               },
               {
                 icon: <BellRing size={18} />,
-                t: "Only alerts for real buyers",
-                d: "Never miss a customer who is actually ready to purchase.",
+                t: "Solo alertas de compradores reales",
+                d: "Nunca pierdas un cliente listo para comprar.",
               },
               {
                 icon: <Brain size={18} />,
-                t: "Learns your business instantly",
-                d: "Train with your voice in under 3 minutes.",
+                t: "Aprende tu negocio al instante",
+                d: "Entrenalo con tu voz en menos de 3 minutos.",
               },
             ].map((b) => (
               <li key={b.t} className="flex gap-3">
@@ -61,12 +60,12 @@ export default function SignUpPage() {
               </div>
               <div>
                 <p className="text-sm font-medium">Jorge Lima</p>
-                <p className="text-xs text-muted-2">Real Estate Agent · São Paulo</p>
+                <p className="text-xs text-muted-2">Agente inmobiliario · São Paulo</p>
               </div>
             </div>
             <p className="text-sm text-muted italic">
-              &ldquo;My AI assistant handles 80% of inquiries automatically. I only talk
-              to serious buyers now.&rdquo;
+              &ldquo;Mi asistente IA maneja el 80% de las consultas automáticamente.
+              Ahora solo hablo con compradores serios.&rdquo;
             </p>
             <div className="flex gap-0.5 mt-3">
               {Array.from({ length: 5 }).map((_, i) => (
@@ -82,37 +81,36 @@ export default function SignUpPage() {
         <p className="text-xs text-muted-2">© 2026 PilotIA</p>
       </aside>
 
-      {/* Right column — form */}
       <section className="flex items-center justify-center px-6 py-10">
         <div className="w-full max-w-md">
           <div className="lg:hidden mb-8">
             <Logo />
           </div>
-          <h1 className="text-3xl font-semibold tracking-tight">Create Your AI Assistant</h1>
+          <h1 className="text-3xl font-semibold tracking-tight">Creá tu asistente IA</h1>
           <p className="text-muted mt-2 text-sm">
-            Set up in under 3 minutes. No credit card required.
+            Configuralo en menos de 3 minutos. Sin tarjeta de crédito.
           </p>
 
           <form className="mt-8 space-y-5" onSubmit={handleSubmit}>
-            <Input id="name" label="Full name" placeholder="Alexis Rivera" required />
+            <Input id="name" label="Nombre completo" placeholder="Alexis Rivera" required />
             <Input
               id="business"
-              label="Business name"
-              placeholder="Rivera Real Estate"
+              label="Nombre del negocio"
+              placeholder="Rivera Inmobiliaria"
               required
             />
             <Input
               id="email"
               type="email"
               label="Email"
-              placeholder="alexis@mycompany.com"
+              placeholder="alexis@miempresa.com"
               required
             />
             <Input
               id="password"
               type={showPw ? "text" : "password"}
-              label="Password"
-              placeholder="At least 8 characters"
+              label="Contraseña"
+              placeholder="Mínimo 8 caracteres"
               required
               minLength={8}
               rightAdornment={
@@ -120,7 +118,7 @@ export default function SignUpPage() {
                   type="button"
                   onClick={() => setShowPw((s) => !s)}
                   className="hover:text-foreground"
-                  aria-label="Toggle password visibility"
+                  aria-label="Mostrar u ocultar contraseña"
                 >
                   {showPw ? <EyeOff size={18} /> : <Eye size={18} />}
                 </button>
@@ -128,7 +126,7 @@ export default function SignUpPage() {
             />
 
             <Button type="submit" fullWidth size="lg">
-              Create account
+              Crear cuenta
             </Button>
 
             <div className="relative my-2">
@@ -136,14 +134,14 @@ export default function SignUpPage() {
                 <span className="w-full border-t border-border" />
               </div>
               <div className="relative flex justify-center text-xs">
-                <span className="bg-background px-3 text-muted-2">or</span>
+                <span className="bg-background px-3 text-muted-2">o</span>
               </div>
             </div>
 
             <Button type="button" variant="secondary" fullWidth size="lg">
               <span className="flex items-center gap-2">
                 <GoogleG />
-                Continue with Google
+                Continuar con Google
               </span>
             </Button>
           </form>

@@ -14,7 +14,7 @@ export function ProgressHeader({
         <Logo size="md" />
         <div className="flex items-center gap-3 text-xs text-muted">
           <span className="hidden sm:inline">
-            Step {step} of {total}
+            Paso {step} de {total}
           </span>
           <div className="w-32 sm:w-40 h-1.5 bg-surface-2 rounded-full overflow-hidden">
             <div

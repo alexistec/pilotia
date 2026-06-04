@@ -11,13 +11,12 @@ export default function WelcomePage() {
       <header className="max-w-3xl w-full mx-auto px-6 py-6 flex items-center justify-between">
         <Logo />
         <Link href="/" className="text-xs text-muted hover:text-foreground">
-          Sign out
+          Cerrar sesión
         </Link>
       </header>
 
       <main className="flex-1 flex items-center justify-center px-6 pb-32">
         <div className="text-center max-w-xl mx-auto">
-          {/* Animated bolt with sat icons */}
           <div className="relative h-32 w-32 mx-auto mb-2">
             <span className="absolute inset-0 rounded-full bg-accent-soft animate-pilot-pulse" />
             <span className="absolute inset-3 rounded-full bg-accent-soft" />
@@ -33,22 +32,22 @@ export default function WelcomePage() {
           </div>
 
           <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight mt-6">
-            Welcome to <span className="text-accent">PilotIA</span>
+            Bienvenido a <span className="text-accent">PilotIA</span>
           </h1>
           <p className="text-muted mt-3 max-w-md mx-auto">
-            Let&apos;s connect your WhatsApp and train your AI assistant to handle
-            customer inquiries automatically.
+            Conectemos tu WhatsApp y entrenemos a tu asistente IA para manejar
+            consultas de clientes automáticamente.
           </p>
 
           <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent-soft px-3.5 py-1.5 text-xs text-accent">
-            <Clock size={12} /> Setup takes less than 3 minutes
+            <Clock size={12} /> La configuración toma menos de 3 minutos
           </div>
 
           <ol className="mt-8 rounded-2xl border border-border bg-surface/60 divide-y divide-border text-left max-w-md mx-auto">
             {[
-              "Connect your WhatsApp number",
-              "Train your AI with voice or text",
-              "Review what the AI learned",
+              "Conectá tu número de WhatsApp",
+              "Entrená tu IA con voz o texto",
+              "Revisá lo que aprendió la IA",
             ].map((step, i) => (
               <li key={step} className="flex items-center gap-4 px-5 py-4">
                 <span className="text-xs font-mono text-muted-2 w-6">
@@ -58,7 +57,6 @@ export default function WelcomePage() {
               </li>
             ))}
           </ol>
-
         </div>
       </main>
 
@@ -71,10 +69,10 @@ export default function WelcomePage() {
             rightIcon={<ArrowRight size={18} />}
             className="max-w-md"
           >
-            Start Setup
+            Empezar configuración
           </ButtonLink>
           <p className="text-xs text-muted-2">
-            No credit card required to get started
+            Sin tarjeta de crédito para empezar
           </p>
         </div>
       </StepFooter>

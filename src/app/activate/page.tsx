@@ -4,11 +4,11 @@ import { ButtonLink } from "@/components/ui/Button";
 import { StepFooter } from "@/components/ui/StepFooter";
 
 const READY_ITEMS = [
-  "WhatsApp Connected",
-  "Business Profile Learned",
-  "FAQs Learned",
-  "Lead Detection Enabled",
-  "Automatic Responses Enabled",
+  "WhatsApp conectado",
+  "Perfil del negocio aprendido",
+  "Preguntas frecuentes aprendidas",
+  "Detección de leads activa",
+  "Respuestas automáticas activas",
 ];
 
 export default function ActivatePage() {
@@ -24,13 +24,13 @@ export default function ActivatePage() {
           </div>
 
           <h1 className="mt-8 text-3xl sm:text-4xl font-semibold tracking-tight leading-tight">
-            Your AI Assistant
+            Tu asistente IA
             <br />
-            Is Ready
+            está listo
           </h1>
           <p className="text-muted mt-3">
-            Your virtual employee is now monitoring WhatsApp and will only notify you
-            when it matters.
+            Tu empleado virtual ya está monitoreando WhatsApp y solo te va a avisar
+            cuando importe.
           </p>
 
           <ul className="mt-6 rounded-2xl border border-border bg-surface/60 divide-y divide-border text-left">
@@ -44,9 +44,9 @@ export default function ActivatePage() {
 
           <div className="mt-5 grid grid-cols-3 gap-3">
             {[
-              { v: "24/7", l: "AI monitoring" },
-              { v: "< 3s", l: "Response time" },
-              { v: "100%", l: "Coverage" },
+              { v: "24/7", l: "Monitoreo IA" },
+              { v: "< 3s", l: "Tiempo de respuesta" },
+              { v: "100%", l: "Cobertura" },
             ].map((s) => (
               <div
                 key={s.l}
@@ -59,7 +59,6 @@ export default function ActivatePage() {
               </div>
             ))}
           </div>
-
         </div>
       </main>
 
@@ -70,7 +69,7 @@ export default function ActivatePage() {
           fullWidth
           rightIcon={<ArrowRight size={18} />}
         >
-          Go To Dashboard
+          Ir al dashboard
         </ButtonLink>
       </StepFooter>
     </div>

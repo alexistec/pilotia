@@ -16,32 +16,32 @@ import { StepFooter } from "@/components/ui/StepFooter";
 const ROWS = [
   {
     icon: <Building2 size={18} />,
-    title: "Business Type",
-    detail: "Real Estate Agency",
+    title: "Tipo de negocio",
+    detail: "Inmobiliaria",
     tone: "neutral" as const,
   },
   {
     icon: <MessageSquareMore size={18} />,
-    title: "FAQs Learned",
-    detail: "6 questions",
+    title: "Preguntas aprendidas",
+    detail: "6 preguntas",
     tone: "neutral" as const,
   },
   {
     icon: <CheckSquare size={18} />,
-    title: "Questions I Can Answer",
-    detail: "Price, Availability, Location, Process",
+    title: "Preguntas que puedo responder",
+    detail: "Precio, Disponibilidad, Ubicación, Proceso",
     tone: "success" as const,
   },
   {
     icon: <BellRing size={18} />,
-    title: "When To Notify You",
-    detail: "3 trigger conditions",
+    title: "Cuándo avisarte",
+    detail: "3 condiciones de aviso",
     tone: "warning" as const,
   },
   {
     icon: <Target size={18} />,
-    title: "Qualified Lead Signals",
-    detail: "Visit request, Financing inquiry, Offer intent",
+    title: "Señales de lead calificado",
+    detail: "Pedido de visita, Consulta de financiación, Intención de oferta",
     tone: "accent" as const,
   },
 ];
@@ -60,14 +60,14 @@ export default function ReviewPage() {
 
       <main className="flex-1 max-w-3xl w-full mx-auto px-6 py-10 pb-32">
         <p className="text-xs uppercase tracking-widest text-muted-2 mb-2">
-          Step 4 of 4
+          Paso 4 de 4
         </p>
         <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight">
-          Here&apos;s what I learned
+          Esto es lo que aprendí
         </h1>
         <p className="text-muted mt-3 max-w-xl">
-          Review what your AI assistant understood from your training. You can edit
-          anything before activating.
+          Revisá lo que tu asistente IA entendió del entrenamiento. Podés editar todo
+          antes de activarlo.
         </p>
 
         <div className="mt-8 rounded-2xl border border-accent/40 bg-accent-soft/30 p-5 flex items-center justify-between">
@@ -76,9 +76,9 @@ export default function ReviewPage() {
               <Sparkles size={18} />
             </span>
             <div>
-              <p className="font-medium">Understanding quality: Excellent</p>
+              <p className="font-medium">Calidad de comprensión: Excelente</p>
               <p className="text-xs text-muted">
-                AI confidence is high based on your training
+                La confianza de la IA es alta según tu entrenamiento
               </p>
             </div>
           </div>
@@ -104,7 +104,6 @@ export default function ReviewPage() {
             </li>
           ))}
         </ul>
-
       </main>
 
       <StepFooter>
@@ -112,7 +111,7 @@ export default function ReviewPage() {
           href="/onboarding/voice"
           className="h-12 px-5 inline-flex items-center justify-center rounded-xl border border-border-strong text-sm hover:border-accent transition-colors min-w-[120px]"
         >
-          <Pencil size={14} className="mr-2" /> Edit
+          <Pencil size={14} className="mr-2" /> Editar
         </Link>
         <ButtonLink
           href="/activate"
@@ -120,7 +119,7 @@ export default function ReviewPage() {
           className="flex-1"
           rightIcon={<ArrowRight size={18} />}
         >
-          Confirm &amp; Activate
+          Confirmar y activar
         </ButtonLink>
       </StepFooter>
     </div>

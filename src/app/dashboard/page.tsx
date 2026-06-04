@@ -18,68 +18,67 @@ import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 const KPIS = [
   {
     icon: <MessageSquare size={16} />,
-    label: "Conversations today",
+    label: "Conversaciones hoy",
     value: "47",
     delta: "+12%",
     deltaTone: "success" as const,
   },
   {
     icon: <Sparkles size={16} />,
-    label: "Auto-handled",
+    label: "Auto-atendidas",
     value: "41",
     delta: "87%",
     deltaTone: "accent" as const,
   },
   {
     icon: <Clock size={16} />,
-    label: "Awaiting you",
+    label: "Esperándote",
     value: "3",
-    delta: "Urgent",
+    delta: "Urgente",
     deltaTone: "warning" as const,
   },
 ];
 
 const CUSTOMERS = [
   {
-    name: "Maria Rodriguez",
+    name: "María Rodríguez",
     initials: "MR",
     bgClass: "from-pink-400 to-rose-500",
-    ago: "14 min ago",
-    tag: "Buying",
-    confidence: "High",
+    ago: "hace 14 min",
+    tag: "Compra",
+    confidence: "Alta",
     bullets: [
-      "Asked about payment methods",
-      "Requested a property visit",
-      "Mentioned timeline of 2 months",
+      "Preguntó por métodos de pago",
+      "Pidió visitar una propiedad",
+      "Mencionó un plazo de 2 meses",
     ],
   },
   {
-    name: "Carlos Mendez",
+    name: "Carlos Méndez",
     initials: "CM",
     bgClass: "from-cyan-400 to-blue-500",
-    ago: "1 hr ago",
-    tag: "Renting",
-    confidence: "Medium",
+    ago: "hace 1 hora",
+    tag: "Alquiler",
+    confidence: "Media",
     bullets: [
-      "Inquired about 2-bedroom units",
-      "Asked for immediate availability",
-      "Mentioned moving next week",
+      "Consultó por unidades de 2 ambientes",
+      "Pidió disponibilidad inmediata",
+      "Mencionó mudarse la próxima semana",
     ],
   },
 ];
 
 const NAV = [
-  { icon: <Home size={16} />, label: "Home", href: "/dashboard", active: true },
-  { icon: <Lightbulb size={16} />, label: "Opportunities", href: "#", badge: "3" },
-  { icon: <Brain size={16} />, label: "Train AI", href: "#" },
-  { icon: <BookOpen size={16} />, label: "Learnings", href: "#" },
-  { icon: <Settings size={16} />, label: "Settings", href: "#" },
+  { icon: <Home size={16} />, label: "Inicio", href: "/dashboard", active: true },
+  { icon: <Lightbulb size={16} />, label: "Oportunidades", href: "#", badge: "3" },
+  { icon: <Brain size={16} />, label: "Entrenar IA", href: "#" },
+  { icon: <BookOpen size={16} />, label: "Aprendizajes", href: "#" },
+  { icon: <Settings size={16} />, label: "Configuración", href: "#" },
 ];
 
 export default function DashboardPage() {
   return (
     <div className="min-h-screen flex">
-      {/* Sidebar */}
       <aside className="hidden md:flex w-60 flex-col border-r border-border bg-surface/40 px-4 py-6">
         <Logo />
         <nav className="mt-8 space-y-1">
@@ -106,28 +105,26 @@ export default function DashboardPage() {
         <div className="mt-auto rounded-xl border border-border bg-surface p-3 text-xs">
           <p className="text-success flex items-center gap-1.5">
             <span className="h-1.5 w-1.5 rounded-full bg-success animate-pilot-pulse" />
-            AI active
+            IA activa
           </p>
-          <p className="text-muted-2 mt-1">Monitoring 24/7</p>
+          <p className="text-muted-2 mt-1">Monitoreando 24/7</p>
         </div>
       </aside>
 
-      {/* Main */}
       <main className="flex-1 px-6 lg:px-10 py-8 max-w-5xl">
         <header className="flex items-start justify-between flex-wrap gap-4">
           <div>
             <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight">
-              Good Evening, Alexis{" "}
+              Buenas tardes, Alexis{" "}
               <span className="inline-block animate-pilot-pulse">👋</span>
             </h1>
             <p className="text-muted text-sm mt-1">
-              Your AI assistant is monitoring your WhatsApp conversations and handling
-              inquiries automatically.
+              Tu asistente IA está monitoreando tus conversaciones de WhatsApp y
+              manejando consultas automáticamente.
             </p>
           </div>
         </header>
 
-        {/* KPI cards */}
         <section className="mt-6 grid sm:grid-cols-3 gap-3">
           {KPIS.map((k) => (
             <div
@@ -148,21 +145,20 @@ export default function DashboardPage() {
           ))}
         </section>
 
-        {/* Customers requiring attention */}
         <section className="mt-10">
           <div className="flex items-end justify-between mb-4">
             <h2 className="text-lg font-semibold flex items-center gap-2">
               <Flame size={18} className="text-orange-400" />
-              Customers Requiring Attention
+              Clientes que requieren atención
               <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-accent-soft text-accent">
-                3 new
+                3 nuevos
               </span>
             </h2>
             <Link
               href="#"
               className="text-xs text-muted hover:text-foreground flex items-center gap-1"
             >
-              View all <ChevronRight size={14} />
+              Ver todos <ChevronRight size={14} />
             </Link>
           </div>
 
@@ -189,7 +185,7 @@ export default function DashboardPage() {
                   </div>
                   <span className="text-xs flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-warning/30 bg-warning-soft text-warning">
                     <TrendingUp size={12} />
-                    AI Confidence: {c.confidence}
+                    Confianza IA: {c.confidence}
                   </span>
                 </div>
 
@@ -206,7 +202,7 @@ export default function DashboardPage() {
                   href="#"
                   className="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-accent hover:bg-accent-2 transition-colors text-white text-sm font-medium"
                 >
-                  <WhatsAppIcon size={16} className="text-white" /> Open WhatsApp
+                  <WhatsAppIcon size={16} className="text-white" /> Abrir WhatsApp
                 </Link>
               </article>
             ))}

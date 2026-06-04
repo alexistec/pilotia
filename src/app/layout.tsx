@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PilotIA — Your WhatsApp AI assistant",
+  title: "PilotIA — Tu asistente IA en WhatsApp",
   description:
-    "Train an AI assistant that answers repetitive questions on WhatsApp and only notifies you when a customer is ready to buy.",
+    "Entrená un asistente IA que responde preguntas repetitivas en WhatsApp y solo te avisa cuando un cliente está listo para comprar.",
 };
 
 export default function RootLayout({
@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="es"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
