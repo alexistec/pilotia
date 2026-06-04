@@ -1,6 +1,7 @@
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { ButtonLink } from "@/components/ui/Button";
+import { StepFooter } from "@/components/ui/StepFooter";
 
 const READY_ITEMS = [
   "WhatsApp Connected",
@@ -13,7 +14,7 @@ const READY_ITEMS = [
 export default function ActivatePage() {
   return (
     <div className="min-h-screen flex flex-col">
-      <main className="flex-1 flex items-center justify-center px-6 py-16">
+      <main className="flex-1 flex items-center justify-center px-6 py-16 pb-32">
         <div className="text-center max-w-md">
           <div className="relative h-24 w-24 mx-auto">
             <span className="absolute inset-0 rounded-full bg-accent-soft animate-pilot-pulse" />
@@ -59,17 +60,19 @@ export default function ActivatePage() {
             ))}
           </div>
 
-          <ButtonLink
-            href="/dashboard"
-            size="lg"
-            fullWidth
-            className="mt-8"
-            rightIcon={<ArrowRight size={18} />}
-          >
-            Go To Dashboard
-          </ButtonLink>
         </div>
       </main>
+
+      <StepFooter>
+        <ButtonLink
+          href="/dashboard"
+          size="lg"
+          fullWidth
+          rightIcon={<ArrowRight size={18} />}
+        >
+          Go To Dashboard
+        </ButtonLink>
+      </StepFooter>
     </div>
   );
 }

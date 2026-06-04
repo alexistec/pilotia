@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { ArrowRight, Square, Mic } from "lucide-react";
 import { ProgressHeader } from "@/components/ui/ProgressHeader";
 import { Button } from "@/components/ui/Button";
+import { StepFooter } from "@/components/ui/StepFooter";
 
 const FAKE_TRANSCRIPT = `I own a real estate agency called Rivera Properties. We help clients buy, sell, and rent homes in the Miami metro area. Customers often ask about pricing for specific properties, neighborhood information, and the buying process. I want the assistant to answer questions about availability and pricing, and notify me when someone asks for a visit or talks about financing.`;
 
@@ -36,7 +37,7 @@ export default function VoiceTrainingPage() {
     <div className="min-h-screen flex flex-col">
       <ProgressHeader step={3} />
 
-      <main className="flex-1 max-w-2xl w-full mx-auto px-6 py-10">
+      <main className="flex-1 max-w-2xl w-full mx-auto px-6 py-10 pb-32">
         <p className="text-xs uppercase tracking-widest text-muted-2 mb-2">
           Step 3 of 4
         </p>
@@ -82,16 +83,18 @@ export default function VoiceTrainingPage() {
           </p>
         </div>
 
+      </main>
+
+      <StepFooter>
         <Button
           size="lg"
           fullWidth
-          className="mt-8"
           onClick={() => router.push("/onboarding/review")}
           rightIcon={<ArrowRight size={18} />}
         >
-          Finish & Review
+          Finish &amp; Review
         </Button>
-      </main>
+      </StepFooter>
     </div>
   );
 }

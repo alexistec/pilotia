@@ -3,6 +3,7 @@ import { ArrowRight, Clock, MessageCircle } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { ButtonLink } from "@/components/ui/Button";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
+import { StepFooter } from "@/components/ui/StepFooter";
 
 export default function WelcomePage() {
   return (
@@ -14,7 +15,7 @@ export default function WelcomePage() {
         </Link>
       </header>
 
-      <main className="flex-1 flex items-center justify-center px-6 pb-16">
+      <main className="flex-1 flex items-center justify-center px-6 pb-32">
         <div className="text-center max-w-xl mx-auto">
           {/* Animated bolt with sat icons */}
           <div className="relative h-32 w-32 mx-auto mb-2">
@@ -58,19 +59,25 @@ export default function WelcomePage() {
             ))}
           </ol>
 
+        </div>
+      </main>
+
+      <StepFooter>
+        <div className="flex-1 flex flex-col items-center gap-1">
           <ButtonLink
             href="/onboarding/whatsapp"
             size="lg"
-            className="mt-8"
+            fullWidth
             rightIcon={<ArrowRight size={18} />}
+            className="max-w-md"
           >
             Start Setup
           </ButtonLink>
-          <p className="text-xs text-muted-2 mt-4">
+          <p className="text-xs text-muted-2">
             No credit card required to get started
           </p>
         </div>
-      </main>
+      </StepFooter>
     </div>
   );
 }

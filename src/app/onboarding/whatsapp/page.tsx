@@ -6,6 +6,7 @@ import { ProgressHeader } from "@/components/ui/ProgressHeader";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
+import { StepFooter } from "@/components/ui/StepFooter";
 
 export default function ConnectWhatsAppPage() {
   const router = useRouter();
@@ -24,7 +25,7 @@ export default function ConnectWhatsAppPage() {
     <div className="min-h-screen flex flex-col">
       <ProgressHeader step={1} />
 
-      <main className="flex-1 max-w-2xl w-full mx-auto px-6 py-10">
+      <main className="flex-1 max-w-2xl w-full mx-auto px-6 py-10 pb-32">
         <p className="text-xs uppercase tracking-widest text-muted-2 mb-2">
           Step 1 of 4
         </p>
@@ -90,18 +91,19 @@ export default function ConnectWhatsAppPage() {
           third parties.
         </div>
 
-        <div className="mt-8">
-          <Button
-            size="lg"
-            fullWidth
-            onClick={handleConnect}
-            rightIcon={<ArrowRight size={18} />}
-            leftIcon={!connected ? <WhatsAppIcon size={18} className="text-white" /> : undefined}
-          >
-            {connected ? "Continue" : "Connect WhatsApp"}
-          </Button>
-        </div>
       </main>
+
+      <StepFooter>
+        <Button
+          size="lg"
+          fullWidth
+          onClick={handleConnect}
+          rightIcon={<ArrowRight size={18} />}
+          leftIcon={!connected ? <WhatsAppIcon size={18} className="text-white" /> : undefined}
+        >
+          {connected ? "Continue" : "Connect WhatsApp"}
+        </Button>
+      </StepFooter>
     </div>
   );
 }

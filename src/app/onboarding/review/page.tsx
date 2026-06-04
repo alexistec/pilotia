@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { ProgressHeader } from "@/components/ui/ProgressHeader";
 import { ButtonLink } from "@/components/ui/Button";
+import { StepFooter } from "@/components/ui/StepFooter";
 
 const ROWS = [
   {
@@ -57,7 +58,7 @@ export default function ReviewPage() {
     <div className="min-h-screen flex flex-col">
       <ProgressHeader step={4} />
 
-      <main className="flex-1 max-w-3xl w-full mx-auto px-6 py-10">
+      <main className="flex-1 max-w-3xl w-full mx-auto px-6 py-10 pb-32">
         <p className="text-xs uppercase tracking-widest text-muted-2 mb-2">
           Step 4 of 4
         </p>
@@ -104,23 +105,24 @@ export default function ReviewPage() {
           ))}
         </ul>
 
-        <div className="mt-8 flex gap-3">
-          <Link
-            href="/onboarding/voice"
-            className="h-12 px-5 inline-flex items-center justify-center rounded-xl border border-border-strong text-sm hover:border-accent transition-colors flex-1 sm:flex-initial sm:min-w-[120px]"
-          >
-            <Pencil size={14} className="mr-2" /> Edit
-          </Link>
-          <ButtonLink
-            href="/activate"
-            size="lg"
-            className="flex-1"
-            rightIcon={<ArrowRight size={18} />}
-          >
-            Confirm &amp; Activate
-          </ButtonLink>
-        </div>
       </main>
+
+      <StepFooter>
+        <Link
+          href="/onboarding/voice"
+          className="h-12 px-5 inline-flex items-center justify-center rounded-xl border border-border-strong text-sm hover:border-accent transition-colors min-w-[120px]"
+        >
+          <Pencil size={14} className="mr-2" /> Edit
+        </Link>
+        <ButtonLink
+          href="/activate"
+          size="lg"
+          className="flex-1"
+          rightIcon={<ArrowRight size={18} />}
+        >
+          Confirm &amp; Activate
+        </ButtonLink>
+      </StepFooter>
     </div>
   );
 }
